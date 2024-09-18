@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .form-container {
+            background-color: #d1d1d1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+            /* Initially hidden; will be displayed based on action */
+        }
+
+        #signupPrompt {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            display: block;
+            /* Ensure this is always displayed initially */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #ForgotPass {
+            cursor: pointer;
+            color: red;
+            text-decoration: underline;
+            display: block;
+            /* Ensure this is always displayed initially */
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="formBox" class="form-container" style="display: block;"> <!-- Container for the forms -->
+        <!-- Sign-in Form -->
+        <form id="signinForm">
+            <h2 class="text-center">Sign in, please!</h2>
+            <div class="mb-3">
+                <label for="signinEmail" class="form-label">Email address</label>
+                <input name="email" required type="email" class="form-control" id="signinEmail">
+            </div>
+            <div class="mb-3">
+                <label for="signinPassword" class="form-label">Password</label>
+                <input name="password" type="password" required minlength="6" class="form-control" id="signinPassword">
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-outline-danger">Sign In</button>
+            </div>
+        </form>
+
+        <p id="signupPrompt" class="text-center mt-4">New User? Sign Up.</p>
+        <p id="ForgotPass" class="text-center mt-4">Forgot password? Click Here.</p>
+
+        <!-- Registration Form -->
+        <form id="registrationForm" style="display: none;">
+            <h2 class="text-center">Register</h2>
+            <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email address</label>
+                <input name="email" required type="email" class="form-control" id="registerEmail">
+            </div>
+            <div class="mb-3">
+                <label for="registerPassword" class="form-label">Password</label>
+                <input name="password" type="password" required minlength="6" class="form-control" id="registerPassword">
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-outline-primary">Register</button>
+            </div>
+        </form>
+
+        <!-- Password Reset Form -->
+        <form id="passwordResetForm" style="display: none;">
+            <h2 class="text-center">Password Reset</h2>
+            <div class="mb-3">
+                <label for="resetEmail">Email:</label>
+                <input type="email" id="resetEmail" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

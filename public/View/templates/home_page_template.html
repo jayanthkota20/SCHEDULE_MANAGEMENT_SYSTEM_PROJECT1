@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .form-container {
+            background-color: #d1d1d1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .todo-container {
+            background-color: #757272;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/compromise"></script
+</head>
+
+<body>
+    <div class="container my-5">
+        <form method="post" class="form-container">
+            <h1 class="text-center mb-4">My Tasks</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <input type="text" id="category" name="category" size="40" required minlength="2" placeholder="Enter Category" aria-label="Category">
+                        <button id="add-c-button" type="submit" class="btn btn-outline-primary">Add</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <input type="text" id="title" name="title" size="40" required minlength="2" placeholder="Enter Title" aria-label="Title">
+                        <button id="add-button" type="submit" class="btn btn-outline-danger">Add</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="todo-container" class="todo-container"></div>
+    </div>
+</body>
